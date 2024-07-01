@@ -7,14 +7,14 @@ import { deleteuser } from './Reducers/UserReducer';
 
 const Home = () => {
   const users= useSelector(state=>state.users);
- const dispatch=useDispatch();
+  const dispatch=useDispatch();
   const handleDelete=(id)=>{
     dispatch(deleteuser({id:id}));
   }
   return (
     <div className='container'>
         <h1> Home </h1>
-        <Link to="/Create" className='btn btn-success my-3' >Create</Link>
+        <Link to="/Redux_crud_application/Create" className='btn btn-success my-3' >Create</Link>
         <table className='table' style={{ border: "1px solid black" }}>
           <thead >
             <tr>
@@ -31,7 +31,7 @@ const Home = () => {
               <td> {user.name}</td>  
               <td> {user.email}</td>  
                 <td>
-                  <Link to={`/Edit/${user.id}`}  className='btn btn-sm btn-primary'>Edit</Link>
+                  <Link to={`/Redux_crud_application/Edit/${user.id}`}  className='btn btn-sm btn-primary'>Edit</Link>
                   <button onClick={()=>handleDelete(user.id)} className='btn btn-sm btn-danger ms-2'>Delete</button>
                 </td>
               </tr>
