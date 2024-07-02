@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       
-        <h1> Redux Crud APP  </h1> 
+        <h1> Redux CRUD APP  </h1> 
          <BrowserRouter>
             <Routes>
               <Route path='/Redux_crud_application' element={<Home />} /> 
