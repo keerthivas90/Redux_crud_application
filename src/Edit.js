@@ -6,8 +6,8 @@ import { edituser } from './Reducers/UserReducer';
 const Edit = () => {
   const {id}=useParams();
   const users=useSelector(state=>state.users);
-  const CurrentUser= users.filter((user)=>user.id===id);
-  const {name,email}= CurrentUser[0]; 
+  const CurrentUser= users.filter((user)=>user.id==id);
+  const {name , email}= CurrentUser[0]  ;
   const [currentname,setCurrentname]=useState(name);
   const [currentemail,setCurrentemail]=useState(email);
   const navigate=useNavigate();
@@ -19,7 +19,7 @@ const Edit = () => {
       name:currentname,
       email:currentemail
     }));
-    navigate("/");
+    navigate("/Redux_crud_application");
 
   }
   return (

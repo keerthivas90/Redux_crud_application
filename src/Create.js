@@ -16,7 +16,7 @@ const CreateApp = () => {
       name,
       email
     }));
-    navigate("/");
+    navigate("/Redux_crud_application");
   }
    
   return (
@@ -32,7 +32,7 @@ const CreateApp = () => {
             <label htmlFor='email'>Email:</label>
             <input type='email' name='email' className='form-control' placeholder='Enter emailID' onChange={(e)=>setEmail(e.target.value)} />
           </div>
-          <button className='btn btn-info'>Submit</button>
+          <button className='btn btn-info'> Submit </button>
         </form>
       </div>        
     </div>

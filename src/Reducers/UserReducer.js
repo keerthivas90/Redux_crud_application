@@ -9,7 +9,7 @@ const userSlice=createSlice({
        } ,
        edituser:(state,action)=>{
          const {id,name,email}=action.payload;
-         const UpdatedUser=state.find((user)=>user.id===id);
+         const UpdatedUser=state.find((user)=>user.id==id);
         if( UpdatedUser){
             UpdatedUser.name=name;
             UpdatedUser.email=email;
@@ -17,7 +17,7 @@ const userSlice=createSlice({
        },
        deleteuser:(state,action)=>{
             const {id}=action.payload;
-             const UpdatedUser=state.find((user)=>user.id===id);
+             const UpdatedUser=state.find((user)=>user.id==id);
               
             if( UpdatedUser){
                  return state.filter(user=>user.id !== id);
